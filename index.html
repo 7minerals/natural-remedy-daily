@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natural Remedy Daily — What the evidence actually says</title>
+<meta name="description" content="Plain writing about natural approaches to health, including which ones the research supports, which are unclear, and which do not work at all.">
+<link rel="canonical" href="https://naturalremedydaily.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E9EAE0;
+  --card:#F5F5EF;
+  --ink:#23271E;
+  --muted:#6A7062;
+  --moss:#46603A;
+  --amber:#8A5A2B;
+  --rule:#CBCEC0;
+  --maxw:740px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Archivo",system-ui,sans-serif;
+  font-size:17px;line-height:1.68;
+}
+a{color:var(--moss);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+.mast{
+  display:flex;align-items:baseline;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;padding:34px 0 16px;border-bottom:1px solid var(--rule);
+}
+.wordmark{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:25px;font-weight:600;letter-spacing:0.01em;color:var(--ink);
+}
+.mast nav a{font-size:13px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);margin-left:20px}
+
+.hero{padding:54px 0 46px}
+.hero h1{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:clamp(30px,5vw,44px);font-weight:400;line-height:1.14;
+  margin:0 0 20px;letter-spacing:-0.005em;
+}
+.hero p{margin:0 0 14px;color:var(--muted);max-width:54ch;font-size:17px}
+
+/* Signature: materia medica evidence index */
+.index-sec{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:32px 0 28px}
+.eyebrow{
+  font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 6px;
+}
+.eyebrow-sub{font-size:14px;color:var(--muted);margin:0 0 24px;max-width:52ch}
+.entry{
+  display:grid;grid-template-columns:1fr 128px;gap:16px;align-items:baseline;
+  padding:15px 0;border-bottom:1px solid var(--rule);
+}
+.entry:last-of-type{border-bottom:0}
+.entry .name{font-family:"EB Garamond",Georgia,serif;font-size:20px;font-weight:600;line-height:1.25}
+.entry .latin{display:block;font-family:"EB Garamond",Georgia,serif;font-style:italic;font-weight:400;font-size:15px;color:var(--muted);margin-top:1px}
+.entry .use{display:block;font-size:14px;color:var(--muted);margin-top:5px}
+.entry .grade{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-align:right;line-height:1.5}
+.g-good{color:var(--moss)}
+.g-mixed{color:var(--muted)}
+.g-none{color:var(--amber)}
+.index-note{margin:24px 0 0;padding-left:16px;border-left:2px solid var(--amber);font-size:15px;color:var(--muted);max-width:58ch}
+
+.posts{padding:46px 0 0}
+.post{display:block;padding:19px 0;border-bottom:1px solid var(--rule)}
+.post h3{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:21px;font-weight:600;line-height:1.3;margin:0;color:var(--ink);
+}
+.post:hover h3{color:var(--moss)}
+.post:hover{text-decoration:none}
+.state{padding:26px 0;color:var(--muted);font-size:16px}
+
+.about{margin:44px 0 0;padding:26px;background:var(--card);border:1px solid var(--rule)}
+.about h2{font-family:"EB Garamond",Georgia,serif;font-size:20px;font-weight:600;margin:0 0 10px}
+.about p{margin:0 0 10px;font-size:15px;color:var(--muted)}
+.about p:last-child{margin-bottom:0}
+
+footer{margin-top:44px;padding:24px 0 48px;border-top:1px solid var(--rule)}
+footer p{font-size:13px;color:var(--muted);margin:0 0 8px;max-width:62ch}
+
+@media (max-width:520px){
+  .entry{grid-template-columns:1fr;gap:6px}
+  .entry .grade{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="mast">
+      <div class="wordmark">Natural Remedy Daily</div>
+      <nav>
+        <a href="#index">Evidence</a>
+        <a href="#posts">Articles</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <h1>Some of this works. Some of it does not. We tell you which.</h1>
+    <p>Most writing about natural health is either uncritical enthusiasm or blanket dismissal. Neither is much use when you are standing in a pharmacy aisle trying to decide what to buy.</p>
+    <p>We read the research and report it plainly, including when the honest answer is that nobody knows yet.</p>
+  </section>
+
+  <section class="wrap index-sec" id="index">
+    <p class="eyebrow">Evidence index</p>
+    <p class="eyebrow-sub">A sample of what we mean. Strength of evidence, not popularity.</p>
+
+    <div class="entry">
+      <div>
+        <span class="name">Ginger<span class="latin">Zingiber officinale</span></span>
+        <span class="use">Nausea, including in pregnancy and after surgery</span>
+      </div>
+      <div class="grade g-good">Reasonably<br>supported</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <span class="name">Peppermint oil<span class="latin">Mentha &times; piperita</span></span>
+        <span class="use">Abdominal pain in irritable bowel syndrome</span>
+      </div>
+      <div class="grade g-good">Reasonably<br>supported</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <span class="name">St John's wort<span class="latin">Hypericum perforatum</span></span>
+        <span class="use">Mild depression, with serious drug interactions</span>
+      </div>
+      <div class="grade g-mixed">Supported<br>but risky</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <span class="name">Echinacea<span class="latin">Echinacea purpurea</span></span>
+        <span class="use">Preventing or shortening the common cold</span>
+      </div>
+      <div class="grade g-mixed">Mixed and<br>inconsistent</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <span class="name">Colloidal silver<span class="latin">Argentum colloidale</span></span>
+        <span class="use">Marketed for infection and immunity</span>
+      </div>
+      <div class="grade g-none">No support,<br>known harm</div>
+    </div>
+
+    <p class="index-note">The last entry is why this site exists. Colloidal silver has no demonstrated benefit for any condition and can permanently discolour the skin. It still sells well. Popularity is not evidence, and a site that only ever says yes is not telling you anything.</p>
+  </section>
+
+  <section class="wrap posts" id="posts">
+    <p class="eyebrow">Articles</p>
+    <div id="post-list"><p class="state">Loading articles…</p></div>
+  </section>
+
+  <section class="wrap" id="about">
+    <div class="about">
+      <h2>About this site</h2>
+      <p>Natural Remedy Daily is written and reviewed by our editorial team. We cite published research where claims are made and we say so when the evidence is weak or absent.</p>
+      <p>Nothing here is medical advice, and nothing here is a treatment. Herbs and supplements interact with prescription medication and are not appropriate for everyone. Talk to your doctor before starting anything, and do not stop prescribed treatment on the basis of anything you read here.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Independent, research-referenced writing about natural approaches to everyday health.</p>
+    <p>Some links on this site are affiliate or brand-partner links, and we may earn a commission if you buy through them. This does not change what we recommend.</p>
+    <p>© <span id="yr"></span> Natural Remedy Daily</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const REPO = '7minerals/natural-remedy-daily';
+const list = document.getElementById('post-list');
+
+function titleFromName(name){
+  return name
+    .replace(/\.html$/i,'')
+    .replace(/[-_]/g,' ')
+    .replace(/\s+\d{6,}$/,'')
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+fetch('https://api.github.com/repos/' + REPO + '/contents/')
+  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(files => {
+    const posts = files.filter(f =>
+      f.type === 'file' &&
+      /\.html$/i.test(f.name) &&
+      f.name.toLowerCase() !== 'index.html' &&
+      !/^google[0-9a-f]+\.html$/i.test(f.name)
+    );
+
+    if(!posts.length){
+      list.innerHTML = '<p class="state">No articles yet. The first one is on its way.</p>';
+      return;
+    }
+
+    posts.sort((a,b) => b.name.localeCompare(a.name));
+
+    list.innerHTML = posts.map(p =>
+      '<a class="post" href="' + p.name + '"><h3>' + titleFromName(p.name) + '</h3></a>'
+    ).join('');
+  })
+  .catch(() => {
+    list.innerHTML = '<p class="state">Articles could not load. Refresh in a moment.</p>';
+  });
+</script>
+
+</body>
+</html>
