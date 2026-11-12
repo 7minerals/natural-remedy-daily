@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Natural Remedy Daily — What the evidence actually says</title>
+<title>Natural Remedy Daily | What the evidence actually says</title>
 <meta name="description" content="Plain writing about natural approaches to health, including which ones the research supports, which are unclear, and which do not work at all.">
 <link rel="canonical" href="https://naturalremedydaily.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,14 +14,14 @@
   --paper:#E9EAE0;
   --card:#F5F5EF;
   --ink:#23271E;
-  --muted:#6A7062;
+  --muted:#5F6558;
   --moss:#46603A;
   --amber:#8A5A2B;
   --rule:#CBCEC0;
   --maxw:740px;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{
   margin:0;background:var(--paper);color:var(--ink);
   font-family:"Archivo",system-ui,sans-serif;
@@ -34,15 +34,17 @@ a:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
 
 .mast{
   display:flex;align-items:baseline;justify-content:space-between;
-  gap:16px;flex-wrap:wrap;padding:34px 0 16px;border-bottom:1px solid var(--rule);
+  gap:12px 20px;flex-wrap:wrap;padding:34px 0 16px;border-bottom:1px solid var(--rule);
 }
 .wordmark{
   font-family:"EB Garamond",Georgia,serif;
   font-size:25px;font-weight:600;letter-spacing:0.01em;color:var(--ink);
 }
-.mast nav a{font-size:13px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);margin-left:20px}
+.mast nav{display:flex;flex-wrap:wrap;gap:6px 20px}
+.mast nav a{font-size:13px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted)}
+.mast nav a:hover{color:var(--moss)}
 
-.hero{padding:54px 0 46px}
+.hero{padding:54px 24px 46px}
 .hero h1{
   font-family:"EB Garamond",Georgia,serif;
   font-size:clamp(30px,5vw,44px);font-weight:400;line-height:1.14;
@@ -50,8 +52,7 @@ a:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
 }
 .hero p{margin:0 0 14px;color:var(--muted);max-width:54ch;font-size:17px}
 
-/* Signature: materia medica evidence index */
-.index-sec{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:32px 0 28px}
+.index-sec{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:32px 24px 28px;scroll-margin-top:16px}
 .eyebrow{
   font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
   color:var(--muted);margin:0 0 6px;
@@ -65,25 +66,33 @@ a:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
 .entry .name{font-family:"EB Garamond",Georgia,serif;font-size:20px;font-weight:600;line-height:1.25}
 .entry .latin{display:block;font-family:"EB Garamond",Georgia,serif;font-style:italic;font-weight:400;font-size:15px;color:var(--muted);margin-top:1px}
 .entry .use{display:block;font-size:14px;color:var(--muted);margin-top:5px}
+.entry .read{display:inline-block;font-size:13px;margin-top:4px}
 .entry .grade{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-align:right;line-height:1.5}
 .g-good{color:var(--moss)}
 .g-mixed{color:var(--muted)}
 .g-none{color:var(--amber)}
 .index-note{margin:24px 0 0;padding-left:16px;border-left:2px solid var(--amber);font-size:15px;color:var(--muted);max-width:58ch}
 
-.posts{padding:46px 0 0}
-.post{display:block;padding:19px 0;border-bottom:1px solid var(--rule)}
+.topic{padding:42px 24px 4px;scroll-margin-top:16px}
+.topic h2.section{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:26px;font-weight:600;line-height:1.2;margin:0 0 4px;
+}
+.topic .blurb{margin:0 0 12px;font-size:15px;color:var(--muted)}
+.post{display:block;padding:19px 0;border-bottom:1px solid var(--rule);color:var(--ink)}
 .post h3{
   font-family:"EB Garamond",Georgia,serif;
-  font-size:21px;font-weight:600;line-height:1.3;margin:0;color:var(--ink);
+  font-size:21px;font-weight:600;line-height:1.3;margin:0 0 4px;color:var(--ink);
 }
+.post .desc{font-size:15px;color:var(--muted);margin:0}
 .post:hover h3{color:var(--moss)}
 .post:hover{text-decoration:none}
-.state{padding:26px 0;color:var(--muted);font-size:16px}
 
 .about{margin:44px 0 0;padding:26px;background:var(--card);border:1px solid var(--rule)}
 .about h2{font-family:"EB Garamond",Georgia,serif;font-size:20px;font-weight:600;margin:0 0 10px}
 .about p{margin:0 0 10px;font-size:15px;color:var(--muted)}
+.about ul{margin:0 0 10px;padding-left:20px;font-size:15px;color:var(--muted)}
+.about li{margin-bottom:6px}
 .about p:last-child{margin-bottom:0}
 
 footer{margin-top:44px;padding:24px 0 48px;border-top:1px solid var(--rule)}
@@ -93,7 +102,7 @@ footer p{font-size:13px;color:var(--muted);margin:0 0 8px;max-width:62ch}
   .entry{grid-template-columns:1fr;gap:6px}
   .entry .grade{text-align:left}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
@@ -102,9 +111,10 @@ footer p{font-size:13px;color:var(--muted);margin:0 0 8px;max-width:62ch}
   <div class="wrap">
     <div class="mast">
       <div class="wordmark">Natural Remedy Daily</div>
-      <nav>
+      <nav aria-label="Sections">
         <a href="#index">Evidence</a>
-        <a href="#posts">Articles</a>
+        <a href="#cough">Cough &amp; cold</a>
+        <a href="#digestion">Digestion &amp; nausea</a>
         <a href="#about">About</a>
       </nav>
     </div>
@@ -125,9 +135,19 @@ footer p{font-size:13px;color:var(--muted);margin:0 0 8px;max-width:62ch}
     <div class="entry">
       <div>
         <span class="name">Ginger<span class="latin">Zingiber officinale</span></span>
-        <span class="use">Nausea, including in pregnancy and after surgery</span>
+        <span class="use">Nausea. Some support in pregnancy; uncertain for chemotherapy and after surgery; mostly not helpful for motion sickness</span>
+        <a class="read" href="/ginger-for-nausea-how-strong-is-the-evidence.html">Read the evidence</a>
       </div>
-      <div class="grade g-good">Reasonably<br>supported</div>
+      <div class="grade g-mixed">Depends on<br>the cause</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <span class="name">Honey<span class="latin">Mel</span></span>
+        <span class="use">Short-term cough relief, mainly studied in children. Not for babies under 1</span>
+        <a class="read" href="/does-honey-help-a-cough-what-the-trials-found.html">Read the evidence</a>
+      </div>
+      <div class="grade g-mixed">Limited<br>support</div>
     </div>
 
     <div class="entry">
@@ -165,15 +185,42 @@ footer p{font-size:13px;color:var(--muted);margin:0 0 8px;max-width:62ch}
     <p class="index-note">The last entry is why this site exists. Colloidal silver has no demonstrated benefit for any condition and can permanently discolour the skin. It still sells well. Popularity is not evidence, and a site that only ever says yes is not telling you anything.</p>
   </section>
 
-  <section class="wrap posts" id="posts">
-    <p class="eyebrow">Articles</p>
-    <div id="post-list"><p class="state">Loading articles…</p></div>
+  <section class="wrap topic" id="cough">
+    <p class="eyebrow">Topic</p>
+    <h2 class="section">Cough &amp; cold</h2>
+    <p class="blurb">What the trials and health services say about common remedies.</p>
+    <a class="post" href="/does-honey-help-a-cough-what-the-trials-found.html">
+      <h3>Does Honey Help a Cough? What the Trials Found</h3>
+      <p class="desc">A 2018 Cochrane review, NHS advice, who should not have honey, and when to see a doctor.</p>
+    </a>
+  </section>
+
+  <section class="wrap topic" id="digestion">
+    <p class="eyebrow">Topic</p>
+    <h2 class="section">Digestion &amp; nausea</h2>
+    <p class="blurb">Which remedies for an upset stomach have research behind them.</p>
+    <a class="post" href="/ginger-for-nausea-how-strong-is-the-evidence.html">
+      <h3>Ginger for Nausea: How Strong Is the Evidence?</h3>
+      <p class="desc">Pregnancy, chemotherapy, surgery and motion sickness, plus safety limits.</p>
+    </a>
+  </section>
+
+  <section class="wrap topic" id="more" hidden>
+    <p class="eyebrow">Archive</p>
+    <h2 class="section">More articles</h2>
+    <div id="post-list"></div>
   </section>
 
   <section class="wrap" id="about">
     <div class="about">
       <h2>About this site</h2>
-      <p>Natural Remedy Daily is written and reviewed by our editorial team. We cite published research where claims are made and we say so when the evidence is weak or absent.</p>
+      <p>Natural Remedy Daily is written and reviewed by our editorial team. We cite published research and official health guidance where claims are made, and we say so when the evidence is weak or absent.</p>
+      <p><strong>How we write</strong></p>
+      <ul>
+        <li>We list the sources behind every article.</li>
+        <li>We say when evidence is limited or more research is needed.</li>
+        <li>We do not give medical advice or recommend products.</li>
+      </ul>
       <p>Nothing here is medical advice, and nothing here is a treatment. Herbs and supplements interact with prescription medication and are not appropriate for everyone. Talk to your doctor before starting anything, and do not stop prescribed treatment on the basis of anything you read here.</p>
     </div>
   </section>
@@ -181,17 +228,24 @@ footer p{font-size:13px;color:var(--muted);margin:0 0 8px;max-width:62ch}
 
 <footer>
   <div class="wrap">
-    <p>Independent, research-referenced writing about natural approaches to everyday health.</p>
+    <!-- DISCLOSURE LINE: wording to be confirmed. When agreed, add it here, for example:
+    <p>Natural Remedy Daily is sponsored by Seven Minerals, a magnesium brand.</p> -->
+    <p>Research-referenced writing about natural approaches to everyday health.</p>
     <p>Some links on this site are affiliate or brand-partner links, and we may earn a commission if you buy through them. This does not change what we recommend.</p>
-    <p>© <span id="yr"></span> Natural Remedy Daily</p>
+    <p>&copy; <span id="yr"></span> Natural Remedy Daily</p>
   </div>
 </footer>
 
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 
+// Archive of older articles is off until they have been reviewed. Set to true to show it.
+const SHOW_ARCHIVE = false;
+
 const REPO = '7minerals/natural-remedy-daily';
 const list = document.getElementById('post-list');
+const moreSection = document.getElementById('more');
+const shown = new Set([].map.call(document.querySelectorAll('a.post'), a => a.getAttribute('href')));
 
 function titleFromName(name){
   return name
@@ -201,30 +255,27 @@ function titleFromName(name){
     .replace(/\b\w/g, c => c.toUpperCase());
 }
 
-fetch('https://api.github.com/repos/' + REPO + '/contents/')
-  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
-  .then(files => {
-    const posts = files.filter(f =>
-      f.type === 'file' &&
-      /\.html$/i.test(f.name) &&
-      f.name.toLowerCase() !== 'index.html' &&
-      !/^google[0-9a-f]+\.html$/i.test(f.name)
-    );
-
-    if(!posts.length){
-      list.innerHTML = '<p class="state">No articles yet. The first one is on its way.</p>';
-      return;
-    }
-
-    posts.sort((a,b) => b.name.localeCompare(a.name));
-
-    list.innerHTML = posts.map(p =>
-      '<a class="post" href="' + p.name + '"><h3>' + titleFromName(p.name) + '</h3></a>'
-    ).join('');
-  })
-  .catch(() => {
-    list.innerHTML = '<p class="state">Articles could not load. Refresh in a moment.</p>';
-  });
+if (SHOW_ARCHIVE) {
+  fetch('https://api.github.com/repos/' + REPO + '/contents/')
+    .then(r => r.ok ? r.json() : [])
+    .then(files => {
+      const posts = (Array.isArray(files) ? files : []).filter(f =>
+        f.type === 'file' &&
+        /\.html$/i.test(f.name) &&
+        f.name.toLowerCase() !== 'index.html' &&
+        !/^google[0-9a-f]+\.html$/i.test(f.name) &&
+        !/^sitemap/i.test(f.name) &&
+        !shown.has('/' + f.name)
+      );
+      if(!posts.length) return;
+      posts.sort((a,b) => b.name.localeCompare(a.name));
+      list.innerHTML = posts.map(p =>
+        '<a class="post" href="/' + p.name + '"><h3>' + titleFromName(p.name) + '</h3></a>'
+      ).join('');
+      moreSection.hidden = false;
+    })
+    .catch(() => {});
+}
 </script>
 
 </body>
